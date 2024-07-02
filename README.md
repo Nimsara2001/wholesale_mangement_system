@@ -6,7 +6,7 @@ Simple Wholesale Management System using Java, JavaFX, and MySQL for practice MV
 ## Setup
 
 1. Clone the repository
-2. run the `WholesaleDB.sql` file in your MySQL database
+2. run the `WholesaleDB_Script.sql` file in your MySQL database
 3. change the database connection details in the `DbConnection.java` file
 4. run the project
 
