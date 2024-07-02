@@ -1,0 +1,27 @@
+.root{
+    -fx-background-color: #444941;
+}
+.button{
+    -fx-background-color:#444941 ;
+    -fx-background-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: #CDF3A2;
+    -fx-text-fill: #c7c7c7;
+    -fx-font-size: 18;
+}
+.text-field{
+    -jfx-focus-color: #CDF3A2;
+    -jfx-unfocus-color: rgba(180, 184, 151, 0.16);
+    -fx-prompt-text-fill: rgba(180, 184, 151, 0.49);
+    -fx-text-fill: white;
+}
+.button:hover,.button:pressed{
+    -fx-background-color:#CDF3A2;
+    -fx-text-fill: #444941;
+}
+.label{
+    -fx-text-fill: #FF4848;
+}
+
+
+

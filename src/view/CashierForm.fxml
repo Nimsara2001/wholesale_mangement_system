@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="cashierPane" prefHeight="660.0" prefWidth="1100.0" stylesheets="@style/CashierFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierFormController">
+    <children>
+        <AnchorPane fx:id="paneManageOrder" layoutY="50.0" prefHeight="608.0" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="53.0" layoutX="5.0" layoutY="227.0" stroke="#444941" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="1.2" width="549.0" AnchorPane.leftAnchor="4.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#517878" height="62.0" layoutX="4.0" layoutY="139.0" stroke="#38da9494" strokeType="INSIDE" width="915.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="181.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#517878" height="56.0" layoutX="4.0" layoutY="73.0" stroke="#38da9494" strokeType="INSIDE" width="915.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="181.0" />
+                <VBox layoutX="929.0" prefHeight="610.0" prefWidth="171.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                  <AnchorPane fx:id="timeBoxMgt" prefHeight="121.0" prefWidth="164.0" style="-fx-background-color: #368B85;">
+                     <children>
+                        <Label fx:id="lblTimeMgt" layoutX="7.2" layoutY="23.599999999999987" prefHeight="52.0" prefWidth="157.0" text="12:55:55" AnchorPane.bottomAnchor="45.60000000000002" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="23.599999999999987" />
+                        <Label fx:id="lblDateMgt" layoutX="10.399999999999993" layoutY="77.59999999999994" text="      2020/10/12" AnchorPane.bottomAnchor="20.400000000000063" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" />
+                     </children>
+                  </AnchorPane>
+                        <JFXButton fx:id="btnEditCustomer" onAction="#btnEditCustomerOnAction" prefHeight="153.0" prefWidth="171.0" text="Customer Details">
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" x="2.0" y="10.0">
+                                    <image>
+                                        <Image url="@img/UserMenuMale.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></JFXButton>
+                        <JFXButton fx:id="viewOrderList" layoutX="10.0" layoutY="10.0" onAction="#viewOrderListOnAction" prefHeight="153.0" prefWidth="171.0" text="View Order List">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" x="2.0" y="10.0">
+                           <image>
+                              <Image url="@img/PurchaseOrder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="171.0" style="-fx-text-fill: #D9D9D9;" text="Order Controls">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/DoubleDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                        <JFXButton fx:id="btnConfirmOrderMgt" layoutX="10.0" layoutY="163.0" onAction="#btnConfirmOrderMgtOnAction" prefHeight="69.0" prefWidth="171.0" text=" Update">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" x="2.0" y="10.0">
+                           <image>
+                              <Image url="@img/Checked.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+                  <JFXButton fx:id="btnCancelOrderMgt" layoutX="10.0" layoutY="414.0" onAction="#btnCancelOrderMgtOnAction" prefHeight="69.0" prefWidth="171.0" text="  Cancel">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" x="2.0" y="10.0">
+                           <image>
+                              <Image url="@img/Cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRemoveOrderMgt" layoutX="10.0" layoutY="481.0" onAction="#btnRemoveOrderMgtOnAction" prefHeight="69.0" prefWidth="171.0" text="Remove">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" x="2.0" y="10.0">
+                           <image>
+                              <Image url="@img/Remove.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                    </children>
+                </VBox>
+            <TextField fx:id="txtSearchCustomerId" layoutX="4.0" layoutY="11.0" prefHeight="38.0" prefWidth="150.0" promptText="Enter Customer ID" AnchorPane.leftAnchor="4.0" />
+            <Button fx:id="btnSearchCustomer" layoutX="196.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnSearchCustomerOnAction" prefHeight="37.0" prefWidth="101.0" text="Search" AnchorPane.leftAnchor="154.0" />
+            <ComboBox fx:id="cmbOrderIdFromSearch" layoutX="300.0" layoutY="11.0" prefHeight="37.0" prefWidth="165.0" promptText="Select Order ID" AnchorPane.leftAnchor="277.0" />
+            <TextField fx:id="txtSearchOrder" layoutX="469.0" layoutY="11.0" prefHeight="38.0" prefWidth="165.0" promptText="Enter Order ID" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="466.0" />
+            <Button fx:id="btnSearchOrder" layoutX="634.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnSearchOrderOnAction" prefHeight="39.0" prefWidth="101.0" text="Search" AnchorPane.leftAnchor="634.0" AnchorPane.rightAnchor="365.0" />
+            <Line endX="-33.5" layoutX="213.0" layoutY="61.0" startX="-177.0" stroke="#1affa3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Label layoutX="152.0" layoutY="52.0" style="-fx-font-size: 13;" text="Search Order By Customer ID" textFill="#1affa3" />
+            <Line endX="-40.0" layoutX="556.0" layoutY="61.0" startX="-214.0" stroke="#1affa3" />
+            <Label layoutX="523.0" layoutY="52.0" style="-fx-font-size: 13;" text="Search Order By Order ID" textFill="#1affa3" />
+            <Line endX="124.0" layoutX="804.0" layoutY="61.0" startX="-119.0" stroke="#1affa3" />
+            <Line endX="-177.0" endY="60.50001525878906" layoutX="633.0" layoutY="1.0" startX="-177.0" stroke="#1affa3" />
+            <JFXTextField fx:id="txtCustomerNameMgt" editable="false" labelFloat="true" layoutX="189.0" layoutY="91.0" prefHeight="28.0" prefWidth="235.0" promptText="Customer Name" />
+            <Separator layoutX="185.0" layoutY="82.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <JFXTextField fx:id="txtCustomerAddressMgt" editable="false" labelFloat="true" layoutX="444.0" layoutY="91.0" prefHeight="28.0" prefWidth="293.0" promptText="Address" />
+            <Separator layoutX="439.0" layoutY="83.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <JFXTextField fx:id="txtCustomerCityMgt" editable="false" labelFloat="true" layoutX="755.0" layoutY="91.0" prefHeight="28.0" prefWidth="158.0" promptText="City" />
+            <Separator layoutX="750.0" layoutY="83.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <TableView fx:id="tblCartMgt" layoutX="14.0" layoutY="299.0" prefHeight="303.0" prefWidth="915.0" stylesheets="@style/CashierTableStyle.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="181.0">
+               <columns>
+                  <TableColumn fx:id="colItemCodeMgt" prefWidth="119.0" text="Item Code" />
+                  <TableColumn fx:id="colDescriptionMgt" prefWidth="204.0" text="Description" />
+                  <TableColumn fx:id="colQuantityMgt" prefWidth="137.0" text="Quantity" />
+                  <TableColumn fx:id="colUnitPriceMgt" prefWidth="152.0" text="Unit Price" />
+                  <TableColumn fx:id="colDiscountMgt" prefWidth="136.0" text="Discount" />
+                  <TableColumn fx:id="colTotalMgt" editable="false" prefWidth="166.0" text="Total Price" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <ComboBox fx:id="cmbItemCodeMgt" layoutX="11.0" layoutY="151.0" prefHeight="38.0" prefWidth="150.0" promptText="Pick Item Code" />
+            <JFXTextField fx:id="txtItemDescriptionMgt" editable="false" labelFloat="true" layoutX="179.0" layoutY="160.0" prefHeight="28.0" prefWidth="150.0" promptText="Description" />
+            <JFXTextField fx:id="txtItemPackSizeMgt" editable="false" labelFloat="true" layoutX="343.0" layoutY="160.0" prefHeight="28.0" prefWidth="117.0" promptText="Pack Size" />
+            <JFXTextField fx:id="txtItemUnitPriceMgt" editable="false" labelFloat="true" layoutX="474.0" layoutY="160.0" prefHeight="28.0" prefWidth="125.0" promptText="Unit Price" />
+            <JFXTextField fx:id="txtItemQtyOnHandMgt" editable="false" labelFloat="true" layoutX="610.0" layoutY="160.0" prefHeight="28.0" prefWidth="87.0" promptText="Qty On Hand" />
+            <JFXTextField fx:id="txtItemDiscountRateMgt" editable="false" labelFloat="true" layoutX="709.0" layoutY="160.0" prefHeight="28.0" prefWidth="79.0" promptText="Discount(%)" />
+            <Button fx:id="btnAddToCartMgt" layoutX="802.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnAddToCartOnActionMgt" prefHeight="53.0" prefWidth="117.0" text="Add To Cart">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnRemoveItemFromCartMgt" layoutX="681.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnRemoveItemFromCartOnActionMgt" prefHeight="53.0" prefWidth="117.0" text="Remove Item">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <JFXTextField fx:id="txtQtyForCustomerMgt" labelFloat="true" layoutX="809.0" layoutY="160.0" prefHeight="28.0" prefWidth="104.0" promptText="Enter QTY" />
+            <Label fx:id="lblTextOrderIdMgt" layoutX="9.0" layoutY="244.0" text="Order ID : " />
+            <Label fx:id="lblTextTotalCostMgt" layoutX="176.0" layoutY="243.0" style="-fx-text-fill: #FFF338;" text="Total Cost : Rs.  " />
+            <Label fx:id="lblOrderIdMgt" layoutX="89.0" layoutY="244.0" text="O-00" />
+            <Label fx:id="lblTotalCostMgt" layoutX="299.0" layoutY="242.0" style="-fx-text-fill: #FFF338;" text="00.00 /=" />
+            <Separator layoutX="802.0" layoutY="152.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="9.0" />
+            <Separator layoutX="174.0" layoutY="151.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="338.0" layoutY="151.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="604.0" layoutY="151.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="467.0" layoutY="151.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="704.0" layoutY="151.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="168.0" layoutY="234.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <JFXTextField fx:id="txtCustomerIdMgt" editable="false" labelFloat="true" layoutX="15.0" layoutY="91.0" prefHeight="28.0" prefWidth="150.0" promptText="Customer ID" />
+            <Separator layoutX="11.0" layoutY="82.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Label fx:id="lblQtyForCustomerMgt" layoutX="808.0" layoutY="201.0" prefHeight="16.0" prefWidth="104.0" style="-fx-text-fill: #FFF338; -fx-font-size: 14;" />
+            <Label fx:id="lblTempValidation" disable="true" layoutX="460.0" layoutY="201.0" opacity="0.0" prefHeight="23.0" prefWidth="101.0" visible="false" />
+            <Line endX="-177.0" endY="60.50001525878906" layoutX="922.0" startX="-177.0" stroke="#1affa3" />
+            <ComboBox fx:id="cmbOrderIds" layoutX="754.0" layoutY="11.0" prefHeight="37.0" prefWidth="165.0" promptText="Pick an Order ID" AnchorPane.rightAnchor="181.0" />
+            <Button fx:id="btnEditQtyMgt" layoutX="561.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnEditQtyMgtOnAction" prefHeight="53.0" prefWidth="117.0" text="Edit Quantity">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Compose.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="paneMakeOrder" prefHeight="610.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#517878" height="50.0" layoutX="13.0" layoutY="106.0" stroke="#38da94" strokeType="INSIDE" width="908.0" AnchorPane.leftAnchor="13.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#517878" height="50.0" layoutX="13.0" layoutY="17.0" stroke="#38da94" strokeType="INSIDE" width="908.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="179.0" />
+                <TableView fx:id="tblCart" layoutY="252.0" prefHeight="343.0" prefWidth="889.0" stylesheets="@style/CashierTableStyle.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="252.0">
+                    <columns>
+                        <TableColumn fx:id="colItemCode" prefWidth="119.0" text="Item Code" />
+                        <TableColumn fx:id="colDescription" prefWidth="204.0" text="Description" />
+                        <TableColumn fx:id="colQuantity" prefWidth="137.0" text="Quantity" />
+                        <TableColumn fx:id="colUnitPrice" prefWidth="152.0" text="Unit Price" />
+                        <TableColumn fx:id="colDiscount" prefWidth="138.0" text="Discount" />
+                        <TableColumn fx:id="colTotal" editable="false" prefWidth="157.0" text="Total Price" />
+                    </columns>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </TableView>
+                <VBox layoutX="929.0" prefHeight="610.0" prefWidth="171.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                  <AnchorPane fx:id="timeBox" prefHeight="121.0" prefWidth="164.0" style="-fx-background-color: #368B85;">
+                     <children>
+                        <Label fx:id="lblTime" layoutX="7.2" layoutY="23.599999999999987" prefHeight="52.0" prefWidth="157.0" text="12:55:55" AnchorPane.bottomAnchor="45.60000000000002" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="23.599999999999987" />
+                        <Label fx:id="lblDate" layoutX="10.399999999999993" layoutY="77.59999999999994" text="      2020/10/12" AnchorPane.bottomAnchor="20.400000000000063" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" />
+                     </children></AnchorPane>
+                        <JFXButton fx:id="btnAddCustomer" layoutX="10.0" layoutY="10.0" onAction="#btnAddCustomerOnAction" prefHeight="152.5" prefWidth="171.0" text="Add New Customer">
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" x="2.0" y="10.0">
+                                    <image>
+                                        <Image url="@img/AddUserMale.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></JFXButton>
+                        <JFXButton fx:id="btnListItems" layoutX="10.0" layoutY="10.0" onAction="#btnListItemsOnAction" prefHeight="152.5" prefWidth="171.0" text="List Of Items">
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" x="2.0" y="10.0">
+                                    <image>
+                                        <Image url="@img/ListView.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></JFXButton>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="171.0" style="-fx-text-fill: #D9D9D9;" text="Order Controls">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/DoubleDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <JFXButton fx:id="btnConfirmOrder" layoutX="10.0" layoutY="437.0" onAction="#btnConfirmOrderOnAction" prefHeight="80.0" prefWidth="171.0" text="Confirm">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Checked.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+                  <JFXButton fx:id="btnCancelOrder" layoutX="10.0" layoutY="437.0" onAction="#btnCancelOrderOnAction" prefHeight="80.0" prefWidth="171.0" text=" Cancel">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+                    </children>
+                </VBox>
+            <ComboBox fx:id="cmbCustomerId" layoutX="28.0" layoutY="23.0" prefHeight="38.0" prefWidth="159.0" promptText="Pick Customer ID" AnchorPane.leftAnchor="20.0" />
+            <JFXTextField fx:id="txtCustomerName" editable="false" labelFloat="true" layoutX="189.0" layoutY="32.0" prefHeight="28.0" prefWidth="235.0" promptText="Customer Name" />
+            <JFXTextField fx:id="txtCustomerAddress" editable="false" labelFloat="true" layoutX="450.0" layoutY="32.0" prefHeight="28.0" prefWidth="275.0" promptText="Address" />
+            <JFXTextField fx:id="txtCustomerCity" editable="false" labelFloat="true" layoutX="750.0" layoutY="32.0" prefHeight="28.0" prefWidth="158.0" promptText="City" AnchorPane.leftAnchor="750.0" AnchorPane.rightAnchor="192.0" />
+            <ComboBox fx:id="cmbItemCode" layoutX="20.0" layoutY="111.0" prefHeight="38.0" prefWidth="159.0" promptText="Pick Item Code" AnchorPane.leftAnchor="20.0" />
+            <JFXTextField fx:id="txtItemDescription" editable="false" labelFloat="true" layoutX="188.0" layoutY="120.0" prefHeight="28.0" prefWidth="150.0" promptText="Description" />
+            <JFXTextField fx:id="txtItemPackSize" editable="false" labelFloat="true" layoutX="356.0" layoutY="120.0" prefHeight="28.0" prefWidth="117.0" promptText="Pack Size" />
+            <JFXTextField fx:id="txtItemUnitPrice" editable="false" labelFloat="true" layoutX="486.0" layoutY="120.0" prefHeight="28.0" prefWidth="125.0" promptText="Unit Price" />
+            <JFXTextField fx:id="txtItemQtyOnHand" editable="false" labelFloat="true" layoutX="625.0" layoutY="120.0" prefHeight="28.0" prefWidth="87.0" promptText="Qty On Hand" />
+            <JFXTextField fx:id="txtItemDiscountRate" editable="false" labelFloat="true" layoutX="725.0" layoutY="120.0" prefHeight="28.0" prefWidth="79.0" promptText="Discount(%)" />
+            <Button fx:id="btnAddToCart" layoutX="758.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" prefHeight="53.0" prefWidth="150.0" text="Add To Cart" AnchorPane.rightAnchor="179.0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnRemoveItemFromCart" layoutX="600.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnRemoveItemFromCartOnAction" prefHeight="53.0" prefWidth="150.0" text="Remove Item">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnRefreshCustomerCmb" layoutX="13.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnRefreshCustomerCmbOnAction" prefHeight="32.0" prefWidth="165.0" text="Refresh List">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <JFXTextField fx:id="txtQtyForCustomer" labelFloat="true" layoutX="821.0" layoutY="120.0" prefHeight="28.0" prefWidth="87.0" promptText="Enter QTY" />
+            <Label fx:id="lblTextOrderId" layoutX="25.0" layoutY="190.0" text="Order ID : " />
+            <Label fx:id="lblTextTotalCost" layoutX="185.0" layoutY="190.0" style="-fx-text-fill: #FFF338;" text="Total Cost : Rs.  " />
+            <Label fx:id="lblOrderId" layoutX="110.0" layoutY="190.0" text="O-001" />
+            <Label fx:id="lblTotalCost" layoutX="314.0" layoutY="190.0" style="-fx-text-fill: #FFF338;" text="00.00 /=" />
+            <Separator layoutX="171.0" layoutY="183.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="9.0" />
+            <Separator layoutX="184.0" layoutY="23.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="445.0" layoutY="23.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="745.0" layoutY="23.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="183.0" layoutY="111.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="350.0" layoutY="111.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="481.0" layoutY="112.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="620.0" layoutY="112.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="720.0" layoutY="112.0" opacity="0.12" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Separator layoutX="816.0" layoutY="111.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="53.0" layoutX="12.0" layoutY="175.0" stroke="#444941" strokeLineCap="ROUND" strokeType="INSIDE" width="563.0" AnchorPane.leftAnchor="13.0" />
+            <Line endX="640.0" endY="1.52587890625E-5" layoutX="279.0" layoutY="86.0" startX="-100.0" />
+            <Label fx:id="lblQtyForCustomer" layoutX="821.0" layoutY="155.0" prefHeight="16.0" prefWidth="87.0" style="-fx-text-fill: #FFF338; -fx-font-size: 14;" />
+            </children>
+        </AnchorPane>
+        <HBox prefHeight="52.0" prefWidth="929.0">
+            <children>
+                <JFXButton fx:id="btnMakeOrder" onAction="#btnMakeOrderOnAction" prefHeight="52.0" prefWidth="464.5" text="Make Customer Order">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/CreateOrder.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnManageOrder" layoutX="10.0" layoutY="10.0" onAction="#btnManageOrderOnAction" prefHeight="52.0" prefWidth="464.5" text="Manage Orders">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/Maintenance.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </HBox>
+        <JFXButton fx:id="btnLogOut" layoutX="929.0" onAction="#btnLogOutOnAction" prefHeight="52.0" prefWidth="171.0" text="Log Out" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/LogoutRoundedLeft.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+    </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+.root{
+    -fx-background-color: #c9fde2;
+}
+
+#txtPassword,#txtUserName,#cmbSelectRole{
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color:#368B85;
+}
+
+#txtPassword:pressed,#txtUserName:pressed,#cmbSelectRole:pressed{
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color:#06F89D;
+}
+
+.button{
+    -fx-background-color: #74C8D8;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow( three-pass-box , rgba(100, 100, 100, 0.6), 5, 0.0 , 0 , 1 );
+}
+#btnLogIn:hover{
+    -fx-background-color: #368B85;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0, 0, 0, 0), 0, 0.0 , 0 , 0 );
+}
+
+#btnClear:hover{
+    -fx-background-color: #798777;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0, 0, 0, 0), 0, 0.0 , 0 , 0 );
+
+}
+

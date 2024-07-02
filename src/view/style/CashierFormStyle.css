@@ -1,0 +1,124 @@
+*{
+    -fx-font-family:Inter;
+}
+.button{
+    -fx-background-color:#368B85;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-family:Inter;
+    -fx-border-color: #bfbfbf;
+    -fx-border-width: 0.2;
+}
+.button:hover{
+    -fx-background-color: #5abfb8;
+}
+#btnLogOut:hover{
+    -fx-background-color: #cb707f;
+}
+#btnAddCustomer,#btnListItems,#btnEditCustomer,#viewOrderList{
+    -fx-content-display: top;
+}
+
+#paneMakeOrder,#paneManageOrder{
+    -fx-background-color: #798777;
+}
+
+#timeBox,#timeBoxMgt{
+    -fx-background-color:#368B85;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-family:Inter;
+    -fx-border-color: #bfbfbf;
+    -fx-border-width: 0.2;
+}
+#lblTime,#lblTimeMgt{
+    -fx-font-size: 37;
+    -fx-text-fill: #BDF2D5;
+    -fx-text-alignment: center;
+}
+#lblDate,#lblDateMgt{
+    -fx-font-size: 18;
+    -fx-text-fill: #BDF2D5;
+    -fx-text-alignment: center;
+}
+
+#btnConfirmOrder:hover,#btnConfirmOrderMgt:hover{
+    -fx-background-color: #DF711B;
+    -fx-text-fill: #F6F6F6;
+}
+#btnCancelOrder:hover,#btnCancelOrderMgt:hover {
+    -fx-background-color: #F8485E;
+}
+#btnRemoveOrderMgt:hover{
+    -fx-background-color: #BE0000;
+}
+.text-field{
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-color:#444941 ;
+    -fx-border-width: 0.4;
+    -fx-background-color: #badac7;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: white;
+    -fx-font-size: 14;
+}
+.jfx-text-field{
+    -jfx-focus-color: #CFCFCF;
+    -jfx-unfocus-color: #CFCFCF;
+    -fx-prompt-text-fill: #CFCFCF;
+    -fx-border-radius: 0;
+    -fx-border-color:transparent ;
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-text-fill: black;
+    -fx-font-size: 14;
+}
+
+#btnSearchCustomer,#btnSearchOrder{
+    -fx-background-color: #444941;
+    -fx-border-color: #444941;
+    -fx-pref-height:37 ;
+}
+#btnSearchCustomer:hover,#btnSearchOrder:hover{
+    -fx-background-color:  #5abfb8;
+    -fx-border-color: #444941;
+    -fx-border-width: 0.2;
+    -fx-text-fill: Black
+}
+
+#txtQtyForCustomer,#txtQtyForCustomerMgt{
+    -jfx-unfocus-color: white;
+    -fx-prompt-text-fill: white;
+    -jfx-focus-color: #5abfb8;
+}
+.combo-box{
+    -fx-background-color: #CFCFCF ;
+    -fx-background-radius: 0;
+}
+.combo-box:hover{
+    -fx-background-color: #5abfb8 ;
+}
+#lblTextOrder,#lblOrderId,#lblTextOrderIdMgt,#lblTextTotalCostMgt{
+    -fx-text-fill: white;
+    -fx-font-size: 17;
+}
+#lblOrderId,#lblTotalCost,#lblTextTotalCost,#lblTextOrderId,#lblTotalCostMgt,#lblOrderIdMgt{
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+#btnAddToCart,#btnRefreshCustomerCmb,#btnRemoveItemFromCart,#btnRemoveItemFromCartMgt,#btnAddToCartMgt,#btnEditQtyMgt{
+    -fx-background-color: #444941;
+    -fx-border-color: #444941;
+    -fx-text-fill: #FDF6F0;
+    -fx-background-radius: 2;
+}
+#btnAddToCart:hover,#btnRemoveItemFromCart:hover,#btnRefreshCustomerCmb:hover,#btnRemoveItemFromCartMgt:hover,#btnAddToCartMgt:hover,#btnEditQtyMgt:hover{
+    -fx-background-color:  #5abfb8;
+    -fx-border-color: #5abfb8;
+    -fx-text-fill: Black;
+}
+
